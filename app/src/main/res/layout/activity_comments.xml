@@ -6,13 +6,13 @@
 <data>
 <variable
     name="comments"
-    type="com.example.projeto2bruna.model.Comments" />
+    type="com.example.projeto3bruna.model.Comment" />
 </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.CommentsActivity">
+    tools:context=".view.CommentActivity">
 
     <TextView
         android:id="@+id/textView7"

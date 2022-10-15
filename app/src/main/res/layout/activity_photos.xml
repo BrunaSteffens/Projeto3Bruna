@@ -6,13 +6,13 @@
     <data>
         <variable
             name="photos"
-            type="com.example.projeto2bruna.model.Photos" />
+            type="com.example.projeto3bruna.model.Photo" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.PhotosActivity">
+    tools:context=".view.PhotoActivity">
 
     <TextView
         android:id="@+id/textView8"

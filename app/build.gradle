@@ -10,7 +10,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.projeto2bruna"
+        applicationId 'com.example.projeto3bruna'
         minSdk 28
         targetSdk 32
         versionCode 1

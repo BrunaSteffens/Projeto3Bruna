@@ -7,7 +7,7 @@
     <data>
         <variable
             name="albums"
-            type="com.example.projeto2bruna.model.Albums" />
+            type="com.example.projeto3bruna.model.Albums" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout

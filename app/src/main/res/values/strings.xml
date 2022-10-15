@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Projeto2Bruna</string>
+    <string name="app_name">Projeto3Bruna</string>
     <string name="boas_vindas">Seja bem vindo!</string>
     <string name="cadastrar">Clique aqui para se cadastrar</string>
     <string name="login">Login usuário</string>
@@ -20,7 +20,6 @@
     <string name="UserId">ID do usuário</string>
     <string name="userName">Nome do usuário</string>
     <string name="Email">E-mail</string>
-
 
 
 </resources>

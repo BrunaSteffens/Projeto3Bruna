@@ -7,13 +7,13 @@
     <data>
         <variable
             name="posts"
-            type="com.example.projeto2bruna.model.Posts" />
+            type="com.example.projeto3bruna.model.Post" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.PostsActivity">
+    tools:context=".view.PostActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPosts"
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Posts do usuário"
+        android:text="Post do usuário"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

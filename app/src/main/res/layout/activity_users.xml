@@ -8,14 +8,14 @@
     <data>
         <variable
             name="user"
-            type="com.example.projeto2bruna.model.User" />
+            type="com.example.projeto3bruna.model.User" />
     </data>
 
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.UsersActivity">
+    tools:context=".view.UserActivity">
 
     <TextView
         android:id="@+id/userLogin"
@@ -31,12 +31,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerUser"
-        android:layout_width="388dp"
-        android:layout_height="662dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="386dp"
+        android:layout_height="581dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/userLogin"
+        app:layout_constraintVertical_bias="0.463" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

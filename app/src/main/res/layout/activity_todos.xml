@@ -6,13 +6,13 @@
     <data>
         <variable
             name="todos"
-            type="com.example.projeto2bruna.model.Todos" />
+            type="com.example.projeto3bruna.model.Todo" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.TodosActivity">
+    tools:context=".view.TodoActivity">
 
         <TextView
             android:id="@+id/textViewTasks"
