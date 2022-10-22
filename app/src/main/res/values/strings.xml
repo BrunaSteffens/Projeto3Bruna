@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Projeto3Bruna</string>
     <string name="boas_vindas">Seja bem vindo!</string>
-    <string name="cadastrar">Clique aqui para se cadastrar</string>
+    <string name="cadastrese">Clique aqui para se cadastrar</string>
     <string name="login">Login usuário</string>
     <string name="password">Senha</string>
     <string name="confirmar">Confirmar</string>
     <string name="userpassinvalid">Usuário ou senha inválidos</string>
     <string name="escolhaOpcao">Escolha a opção:</string>
     <string name="usuariosCadastrados">Os usuários cadastrados são:</string>
-    <string name="albums">Álbuns do usuário</string>
+    <string name="albums">Álbuns</string>
     <string name="albumId">ID do álbum</string>
     <string name="albumTitle">Título do álbum</string>
     <string name="verAlbum">Ver álbuns</string>
@@ -17,9 +17,21 @@
     <string name="verFotos">Ver fotos</string>
     <string name="verPosts">Ver posts</string>
     <string name="verComentarios">Ver comentários</string>
-    <string name="UserId">ID do usuário</string>
+    <string name="userId">ID do usuário</string>
     <string name="userName">Nome do usuário</string>
-    <string name="Email">E-mail</string>
+    <string name="email">E-mail</string>
+    <string name="id">ID</string>
+    <string name="titulo">Título</string>
+    <string name="userlogin">User Login</string>
+    <string name="phone">Telefone</string>
+    <string name="body">Corpo</string>
+    <string name="photos">Fotos</string>
+    <string name="comments">Comentários</string>
+    <string name="todos">Tarefas</string>
+    <string name="posts">Posts</string>
+    <string name="cadastreUsuario">Cadastre seu usuário</string>
+    <string name="cadastrar">Cadastrar</string>
+
 
 
 </resources>

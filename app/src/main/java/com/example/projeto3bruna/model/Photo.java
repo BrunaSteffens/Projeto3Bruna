@@ -7,7 +7,7 @@ import com.example.projeto3bruna.repository.AlbumRepository;
 
 public class Photo implements Parcelable {
 
-    private Albums album;
+    private Album album;
     private int photoId;
     private String photoTitle;
     private String photoUrl;
@@ -33,7 +33,7 @@ public class Photo implements Parcelable {
     }
 
     protected Photo(Parcel in){
-        album = in.readParcelable(Albums.class.getClassLoader());
+        album = in.readParcelable(Album.class.getClassLoader());
         photoId = in.readInt();
         photoTitle = in.readString();
         photoUrl = in.readString();
@@ -65,7 +65,19 @@ public class Photo implements Parcelable {
         return photoThumbnailUrl;
     }
 
-    public Albums getAlbum() { return album; }
+    public Album getAlbum() { return album; }
+
+    public void setPhotoTitle(String photoTitle) {
+        this.photoTitle = photoTitle;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public void setPhotoThumbnailUrl(String photoThumbnailUrl) {
+        this.photoThumbnailUrl = photoThumbnailUrl;
+    }
 
     public static final Creator<Photo> CREATOR = new Creator<Photo>() {
         @Override

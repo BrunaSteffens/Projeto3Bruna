@@ -77,4 +77,16 @@ public class Post implements Parcelable {
     }
 
     public User getUser() {return user; }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
+    }
+
+    public void setPostTitle(String postTitle) {
+        this.postTitle = postTitle;
+    }
+
+    public void setPostBody(String postBody) {
+        this.postBody = postBody;
+    }
 }

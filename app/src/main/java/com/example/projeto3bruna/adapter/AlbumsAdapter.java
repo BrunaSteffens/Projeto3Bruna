@@ -9,18 +9,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.projeto3bruna.model.Albums;
+import com.example.projeto3bruna.model.Album;
 import com.example.projeto3bruna.R;
 
 import java.util.List;
 
 public class AlbumsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
-    private List<Albums> albums;
+    private List<Album> albums;
     private final String TAG = "AlbumsAdapter";
 
-    public AlbumsAdapter(List<Albums> albums){
+    public AlbumsAdapter(List<Album> albums){
         this.albums = albums;
-        for (Albums a: albums
+        for (Album a: albums
              ) {
 
         }
@@ -37,11 +37,11 @@ public class AlbumsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Albums objeto = albums.get(position);
+        Album objeto = albums.get(position);
         ((TextView) holder.itemView.findViewById(R.id.textViewAlbumId)).setText(objeto.getAlbumId()+"");
         ((TextView) holder.itemView.findViewById(R.id.textViewAlbumTitle)).setText(objeto.getTitle());
-        ((TextView) holder.itemView.findViewById(R.id.tvAlbumsUserId)).setText(objeto.getUser().getId()+"");
-        ((TextView) holder.itemView.findViewById(R.id.tvAlbumUserName)).setText(objeto.getUser().getName());
+        //((TextView) holder.itemView.findViewById(R.id.tvAlbumsUserId)).setText(objeto.getUser().getId()+"");
+        //((TextView) holder.itemView.findViewById(R.id.tvAlbumUserName)).setText(objeto.getUser().getName());
     }
 
     @Override

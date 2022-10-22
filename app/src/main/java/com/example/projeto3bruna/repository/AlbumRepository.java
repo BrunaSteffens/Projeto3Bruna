@@ -8,7 +8,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.projeto3bruna.model.Albums;
+import com.example.projeto3bruna.model.Album;
 
 import android.util.Log;
 import org.json.JSONArray;
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class AlbumRepository {
     private final String TAG = "Album Repository";
-    private final List<Albums> albums;
+    private final List<Album> albums;
     private static AlbumRepository instance;
     private Context context;
 
@@ -42,7 +42,7 @@ public class AlbumRepository {
                             try {
                                 JSONObject json = response.getJSONObject(i);
                                 Log.d(TAG, "onResponse: "+json.toString());
-                                albums.add(new Albums(json.getInt("userId"),
+                                albums.add(new Album(json.getInt("userId"),
                                         json.getInt("id"), json.getString("title")));
                                 //int userId, int albumId, String title
 
@@ -77,15 +77,15 @@ public class AlbumRepository {
         return instance;
     }
 
-    public List<Albums> getAlbums(){
+    public List<Album> getAlbums(){
         return albums;
     }
 
 
-    public Albums getAlbumById(int albumId){
-        Albums ret = null;
+    public Album getAlbumById(int albumId){
+        Album ret = null;
         Log.d(TAG, "getAlbumByTitle: "+albums.size());
-        for(Albums a : albums){
+        for(Album a : albums){
             Log.d(TAG, "getAlbumById: " + albumId+ " ->" +a.getAlbumId());
             if(a.getAlbumId()==albumId){
                 ret = a;

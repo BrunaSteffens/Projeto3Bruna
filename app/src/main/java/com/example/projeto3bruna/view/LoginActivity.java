@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,21 +25,35 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterCo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        TextView userlogin = findViewById(R.id.editUserLogin);
+        TextView password = findViewById(R.id.editPassword);
+
 
         UserSQLRepository.getInstance(this).addUserTest();
 
         this.presenter = new LoginPresenter(this);
+
         findViewById(R.id.buttonLogin).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
+                        SharedPreferences preferences = getSharedPreferences("dados", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("userLogin", userlogin.getText().toString());
+                        editor.commit();
+
                         presenter.checkLogin(
-                                ((TextView) findViewById(R.id.editTextUser)).getText().toString(),
-                                ((TextView) findViewById(R.id.editTextTextPassword)).getText().toString()
+                                userlogin.getText().toString(),
+                                password.getText().toString()
                         );
                     }
                 }
         );
+
+        SharedPreferences preferences = getSharedPreferences("dados", MODE_PRIVATE);
+        String userLogin=preferences.getString("userLogin", "");
+        userlogin.setText(userLogin);
 
         findViewById(R.id.buttonLoginSignUp).setOnClickListener(
                 (view) ->{
@@ -51,7 +66,7 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenterCo
 
     @Override
     public void message(String msg) {
-        Snackbar.make(this, findViewById(R.id.editTextTextPassword), msg, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(this, findViewById(R.id.editPassword), msg, Snackbar.LENGTH_LONG).show();
     }
 
     @Override

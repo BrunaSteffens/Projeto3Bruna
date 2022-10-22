@@ -8,6 +8,7 @@ import com.example.projeto3bruna.R;
 import android.os.Bundle;
 
 import com.example.projeto3bruna.adapter.PostsAdapter;
+import com.example.projeto3bruna.repository.PostSQLRepository;
 import com.example.projeto3bruna.repository.PostsRepository;
 
 public class PostActivity extends AppCompatActivity {
@@ -18,8 +19,10 @@ public class PostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posts);
 
+        PostSQLRepository.getInstance(this).addPostTest();
+
         RecyclerView rv = findViewById(R.id.recyclerPosts);
-        PostsAdapter adapter = new PostsAdapter(PostsRepository.getInstance(this).getPosts());
+        PostsAdapter adapter = new PostsAdapter(PostSQLRepository.getInstance().getPosts());
         rv.setAdapter(adapter);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         rv.setLayoutManager(llm);

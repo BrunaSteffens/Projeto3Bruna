@@ -14,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="341dp"
-        android:text="id"
+        android:text="@string/id"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="To-Do Title"
+        android:text="@string/titulo"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         android:id="@+id/tvTodoUserId"
         android:layout_width="40dp"
         android:layout_height="33dp"
-        android:text="@string/UserId"
+        android:text="@string/userId"
         app:layout_constraintStart_toStartOf="@+id/vhTodoId"
         app:layout_constraintTop_toTopOf="@+id/tvTodoUserName" />
 

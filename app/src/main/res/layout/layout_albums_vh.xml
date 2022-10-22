@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:background="#C4409BE1">
+    android:background="#BCBBBB">
 
     <TextView
         android:id="@+id/textViewAlbumId"
@@ -37,7 +37,7 @@
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/UserId"
+        android:text="@string/userId"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

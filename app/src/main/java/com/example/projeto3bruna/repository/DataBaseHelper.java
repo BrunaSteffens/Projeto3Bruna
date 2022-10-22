@@ -25,26 +25,26 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sqlUsers = "create table users (user_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, userLogin TEXT, password TEXT, email TEXT, phone TEXT);";
+        String sqlUsers = "create table users (user_id INTEGER PRIMARY KEY, name TEXT, userLogin TEXT, password TEXT, email TEXT, phone TEXT);";
         db.execSQL(sqlUsers);
 
-        String sqlToDo = "CREATE TABLE todos (todo_id INTEGER PRIMARY KEY AUTOINCREMENT, todo_title TEXT, todo_status TEXT);";
+        String sqlToDo = "CREATE TABLE todos (todo_id INTEGER PRIMARY KEY, todo_title TEXT, todo_status TEXT);";
         //FOREIGN KEY (todo_user_id) REFERENCES users (user_id)
         db.execSQL(sqlToDo);
 
-        String sqlPost = "CREATE TABLE posts (post_id INTEGER PRIMARY KEY AUTOINCREMENT, post_title TEXT, post_body TEXT);";
+        String sqlPost = "CREATE TABLE posts (post_id INTEGER PRIMARY KEY, post_title TEXT, post_body TEXT);";
         //FOREIGN KEY (post_user_id) REFERENCES user (user_id))
         db.execSQL(sqlPost);
 
-        String sqlAlbum = "CREATE TABLE albums (album_id INTEGER PRIMARY KEY AUTOINCREMENT, album_title TEXT);";
+        String sqlAlbum = "CREATE TABLE albums (album_id INTEGER PRIMARY KEY, album_title TEXT);";
         //FOREIGN KEY (album_user_id) REFERENCES user (user_id)
         db.execSQL(sqlAlbum);
 
-        String sqlComment = "CREATE TABLE comments (comment_id INTEGER PRIMARY KEY AUTOINCREMENT, comment_title TEXT, comment_email TEXT, comment_body TEXT);";
+        String sqlComment = "CREATE TABLE comments (comment_id INTEGER PRIMARY KEY, comment_title TEXT, comment_email TEXT, comment_body TEXT);";
         // FOREIGN KEY (comment_post_id) REFERENCES posts (post_id)
         db.execSQL(sqlComment);
 
-        String sqlPhoto = "CREATE TABLE photos (photo_id INTEGER PRIMARY KEY AUTOINCREMENT, photo_title TEXT, photo_url TEXT, photo_thumbnail TEXT);";
+        String sqlPhoto = "CREATE TABLE photos (photo_id INTEGER PRIMARY KEY, photo_title TEXT, photo_url TEXT, photo_thumbnail TEXT);";
         //FOREIGN KEY (album_photo_id) REFERENCES albums (album_id)
         db.execSQL(sqlPhoto);
 

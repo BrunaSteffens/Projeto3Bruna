@@ -35,10 +35,11 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: O onBindViewHolder está sendo trazido agora");
         User objeto = dados.get(position);
-        ((TextView) holder.itemView.findViewById(R.id.textViewName)).setText(objeto.getName());
-        ((TextView) holder.itemView.findViewById(R.id.textViewUsrUserLogin)).setText(objeto.getUserLogin());
-        ((TextView) holder.itemView.findViewById(R.id.textViewUsrEmail)).setText(objeto.getEmail());
-        ((TextView) holder.itemView.findViewById(R.id.textViewUsrPhone)).setText(objeto.getPhone());
+        ((TextView) holder.itemView.findViewById(R.id.userVHuserId)).setText(objeto.getName());
+        ((TextView) holder.itemView.findViewById(R.id.userVHName)).setText(objeto.getName());
+        ((TextView) holder.itemView.findViewById(R.id.userVHUserLogin)).setText(objeto.getUserLogin());
+        ((TextView) holder.itemView.findViewById(R.id.userVHEmail)).setText(objeto.getEmail());
+        ((TextView) holder.itemView.findViewById(R.id.userVHPhone)).setText(objeto.getPhone());
 
     }
 

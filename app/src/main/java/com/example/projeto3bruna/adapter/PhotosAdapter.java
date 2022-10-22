@@ -40,7 +40,7 @@ public class PhotosAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         );
         ((TextView) holder.itemView.findViewById(R.id.TextViewPhotoId)).setText(objeto.getPhotoId() + "");
         ((TextView) holder.itemView.findViewById(R.id.TextViewPhotoTitle)).setText(objeto.getPhotoTitle());
-        ((TextView) holder.itemView.findViewById(R.id.tvPhotosUserName)).setText(objeto.getAlbum().getUserName());
+        //((TextView) holder.itemView.findViewById(R.id.tvPhotosUserName)).setText(objeto.getAlbum().getUserName());
     }
 
     @Override

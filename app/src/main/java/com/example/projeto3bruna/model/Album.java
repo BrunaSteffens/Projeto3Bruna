@@ -5,21 +5,26 @@ import android.os.Parcelable;
 
 import com.example.projeto3bruna.repository.UserRepository;
 
-public class Albums implements Parcelable{
+public class Album implements Parcelable{
 
     private User user;
     private int albumId;
     private String title;
 
-    public Albums(){    }
+    public Album(){    }
 
-    public Albums(int userId, int albumId, String title) {
+    public Album(int userId, int albumId, String title) {
         this.user = UserRepository.getInstance().getUserById(userId);
         this.albumId = albumId;
         this.title = title;
     }
 
-    public Albums(int albumId) {
+    public Album(int albumId, String title) {
+        this.albumId = albumId;
+        this.title = title;
+    }
+
+    public Album(int albumId) {
         this.albumId = albumId;
     }
 
@@ -31,23 +36,23 @@ public class Albums implements Parcelable{
         parcel.writeString(title);
     }
 
-    protected Albums(Parcel in){
+    protected Album(Parcel in){
         user = in.readParcelable(User.class.getClassLoader());
         albumId = in.readInt();
         title = in.readString();
     }
 
-    public static final Creator<Albums> CREATOR = new Creator<Albums>() {
+    public static final Creator<Album> CREATOR = new Creator<Album>() {
         @Override
-        public Albums createFromParcel(Parcel in) {
+        public Album createFromParcel(Parcel in) {
 
-            return new Albums(in);
+            return new Album(in);
         }
 
         @Override
-        public Albums[] newArray(int size) {
+        public Album[] newArray(int size) {
 
-            return new Albums[size];
+            return new Album[size];
         }
     };
 
@@ -64,5 +69,17 @@ public class Albums implements Parcelable{
 
     public String getUserName() {
         return getUser().getName();
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setAlbumId(int albumId) {
+        this.albumId = albumId;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

@@ -81,4 +81,20 @@ public class Comment implements Parcelable {
     }
 
     public Post getPost() { return post; }
+
+    public void setCommentId(int commentId) {
+        this.commentId = commentId;
+    }
+
+    public void setCommentTitle(String commentTitle) {
+        this.commentTitle = commentTitle;
+    }
+
+    public void setCommentEmail(String commentEmail) {
+        this.commentEmail = commentEmail;
+    }
+
+    public void setCommentBody(String commentBody) {
+        this.commentBody = commentBody;
+    }
 }

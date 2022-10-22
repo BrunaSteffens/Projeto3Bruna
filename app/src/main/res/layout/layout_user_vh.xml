@@ -10,11 +10,11 @@
     android:paddingBottom="5dp">
 
     <TextView
-        android:id="@+id/textViewName"
+        android:id="@+id/userVHName"
         android:layout_width="205dp"
         android:layout_height="28dp"
         android:layout_marginTop="8dp"
-        android:text="@string/app_name"
+        android:text="@string/userName"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -23,44 +23,55 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewUsrUserLogin"
+        android:id="@+id/userVHUserLogin"
         android:layout_width="205dp"
         android:layout_height="28dp"
         android:layout_marginTop="8dp"
-        android:text="@string/app_name"
+        android:text="@string/userlogin"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewName"
-        app:layout_constraintStart_toStartOf="@+id/textViewName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+        app:layout_constraintEnd_toEndOf="@+id/userVHName"
+        app:layout_constraintStart_toStartOf="@+id/userVHName"
+        app:layout_constraintTop_toBottomOf="@+id/userVHName" />
 
     <TextView
-        android:id="@+id/textViewUsrPhone"
+        android:id="@+id/userVHPhone"
         android:layout_width="205dp"
         android:layout_height="28dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/app_name"
+        android:text="@string/phone"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textViewUsrEmail"
-        app:layout_constraintStart_toStartOf="@+id/textViewUsrEmail"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUsrEmail" />
+        app:layout_constraintEnd_toEndOf="@+id/userVHEmail"
+        app:layout_constraintStart_toStartOf="@+id/userVHEmail"
+        app:layout_constraintTop_toBottomOf="@+id/userVHEmail" />
 
     <TextView
-        android:id="@+id/textViewUsrEmail"
+        android:id="@+id/userVHEmail"
         android:layout_width="205dp"
         android:layout_height="28dp"
         android:layout_marginTop="8dp"
-        android:text="@string/app_name"
+        android:text="@string/email"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewUsrUserLogin"
-        app:layout_constraintStart_toStartOf="@+id/textViewUsrUserLogin"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUsrUserLogin" />
+        app:layout_constraintEnd_toEndOf="@+id/userVHUserLogin"
+        app:layout_constraintStart_toStartOf="@+id/userVHUserLogin"
+        app:layout_constraintTop_toBottomOf="@+id/userVHUserLogin" />
+
+    <TextView
+        android:id="@+id/userVHuserId"
+        android:layout_width="55dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/id"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/userVHName"
+        tools:layout_editor_absoluteY="8dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

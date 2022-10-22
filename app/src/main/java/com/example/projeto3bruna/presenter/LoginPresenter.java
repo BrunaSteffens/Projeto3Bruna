@@ -21,7 +21,7 @@ public class LoginPresenter implements LoginPresenterContract.presenter{
 
     @Override
     public void checkLogin(String login, String password) {
-        UserSQLRepository repo = UserSQLRepository.getInstance(view.getActivity(), null);
+        UserSQLRepository repo = UserSQLRepository.getInstance(view.getActivity());
         User u = repo.getUserByUserLogin(login);
         if (u== null || !u.getPassword().equals(password)){
             view.message("Usuário ou senha inválidos");

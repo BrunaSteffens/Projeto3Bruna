@@ -35,7 +35,7 @@ public class CommentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Comment objeto = commentList.get(position);
-        ((TextView) holder.itemView.findViewById(R.id.commentId)).setText(objeto.getCommentId()+"");
+        //((TextView) holder.itemView.findViewById(R.id.commentId)).setText(objeto.getCommentId()+"");
         ((TextView) holder.itemView.findViewById(R.id.commentEmail)).setText(objeto.getCommentEmail());
         ((TextView) holder.itemView.findViewById(R.id.commentTitle)).setText(objeto.getCommentTitle());
         ((EditText) holder.itemView.findViewById(R.id.commentBody)).setText(objeto.getCommentBody());

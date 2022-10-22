@@ -21,8 +21,6 @@ public class UserActivity extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: Construindo o recycler view dos usuários");
 
-
-
         RecyclerView rv = findViewById(R.id.recyclerUser);
         UserAdapter adapter = new UserAdapter(UserSQLRepository.getInstance().getUsers());
         rv.setAdapter(adapter);
